@@ -1,17 +1,19 @@
-import skyImage from './assets/sky.png' 
-import roadImage from './assets/road.png' 
+import sky from './assets/sky.png' 
+import road from './assets/road.png' 
+import carCenter from './assets/cars/car_center.png' 
 
 export default function App() {
+
   return (
     <>
       {/* sky picture */}
-      <div className="sky min-h-[50%]">
-        <img src={ skyImage } alt="sky" />
-      </div>
+      <img src={ sky } className="sky" alt="sky" />
 
-      {/* road picture */}
-      <div className="road min-h-[50%]">
-        <img src={ roadImage } alt="road" />
+      <div className="relative">
+         {/* road picture */}
+        <img src={ road } className="road" alt="road" />
+        {/* car picture */}
+         <img  src={ carCenter } className="absolute car" alt="car" />
       </div>
     </>
   )
